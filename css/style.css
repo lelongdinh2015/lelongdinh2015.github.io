@@ -1,154 +1,167 @@
-/* Imported Typeface Files */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-@font-face {
-    font-family:Lato;
-    src: url(../fonts/lato-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+header,nav{
+    border-bottom: .125rem solid black;
+}
+article{
+    border-right: .1rem solid black;
+    margin-right: -1em;
+    
+}
+@font-face{
+    font-family: Montserrat;
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-
-    font-family:Alfa Slab One;
-    src: url(../fonts/alfa-slab-one-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+    font-family: Josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-/* Root */
-
-html {
-    font-size:16px;
+span{
+    background-color: rgb(190, 98, 98);
+    color: rgb(193, 221, 193);
 }
-
-
-/* Body & Main  */
-
-body {
-    font-family:Lato, Arial, sans-serif;
-    font-size:1rem;
-    padding:1rem;
-    min-width:39rem;
-    max-width:50rem;
-    margin:0 auto;
-}
-main {
-    background-color:#ddd;
-    background-image:url(../images/wrinkled-white-paper-background.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    border:1px solid #333;
-}
-
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
-
-/* The first heading style rule has been completed for you. Examine it carefully
-   to get an idea of some of the style properties you will need to use; then
-   complete the style code according to the instructions in Canvas. */
-
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-
-
-/* Headings  */
-
-h1 {
-    text-transform: uppercase;
-    font-size:6rem;
-    margin: 0;
-    letter-spacing: .5rem;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: Montserrat, Arial, sans-serif;
+    font-style: italic;
+    
 }
 h2{
-    font-size: 3rem;
-    letter-spacing: .25rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+    font-size: 1.5em;
+    margin-left: 1.7em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-family: Arial;
 }
 h3{
-    font-size: 2rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    color:black;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
-    margin-top: -2rem;
-    margin-bottom: -2rem;
-    
-}
-
-h4{
-    font-size: 1.5rem;
-    letter-spacing: .25rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin: 0;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
-    padding-bottom: 1.125rem;
-    
-}
-h5{
-    font-size: 1rem;
-    margin-top: .25rem;
-    padding: 0.5rem ;
-    background-color: #333;
-    color:#FFF;
-    margin: 0;
-    font-weight: normal;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    text-align:center;
-}
-
-
-/* Section & Paragraph */
-
-section{
-    margin-top: .5rem;
-
-}
-
-p{
-    margin: 1rem auto 1rem auto;
-    padding: 0 1rem 0 1rem;
+    font-size: 1em;
     text-align: left;
-    width: 90%
 }
-/* Image & Figure */
-img{
-    width: 100%;
-    margin: 0 auto 0 auto;
-    max-width:  50rem;
+nav {
+    background-color: #FFF;
+    padding-left: 0;
+  }
+nav ul{
+    text-align: left;
+    margin-left:1em;
+    padding:0;
+    list-style: none;
+    display: flex;
+    word-spacing: normal;
+    
+}
+nav a {
+    color: rgb(30, 30, 97);
+    text-decoration: none;
+    padding: 1em 1em;
+    font-size: 1.5em;
+    font-family: Opensans, Arial, sans-serif;
+
+  }
+button{
+    color: white;
+    background-color:darkblue;
+}
+.article-image{
+    width:15em;
+    float: left;
+    margin-right: 11.5em;
+}
+.main-section{
+    display: grid;    
+    grid-template-columns: 70% 20%;
+    grid-column-gap: 3em;
 }
 
-figure{
-    margin-bottom: 2rem;
+.subsection{  
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-column-gap: 0.5em;
+  row-gap: 1em;
+}
+div{
+    max-width: 15em;
+}
+p{
+    margin-right: 1.5em;
+    font-family: Opensans,Arial, sans-serif;
+}
+p2{
+    font-size: .5em;
 }
 figcaption{
-    padding-top: .5rem;
-    text-align: right;
-
+    font-size: .8em;
+    background-color: rgb(193, 221, 193);
+    width: 22.5em;
+    height: 3em;
+    text-align: center ;
 }
-
-
-/* Footer */
-footer{
-    padding: 1rem;
-    border-top: 2rem solid #333;
+.margin{
+    margin-left: 2.5rem;
+}
+.button{
+    margin-right: 2.5em;
+    margin-top:3em;
     
 }
-h4 span{
-    padding: 0 .5rem 0 .5rem;
-}
+
 
